@@ -1,0 +1,5 @@
+version: "2"
+services:
+  image:
+    build: .
+    image: openlmis/covid-distro-init
