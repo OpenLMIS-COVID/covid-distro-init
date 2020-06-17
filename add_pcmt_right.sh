@@ -22,9 +22,11 @@ DB=`echo ${DATABASE_URL} | sed -E 's/^.*\/(.+)\?*$/\1/'` # /<db>?
 : "${DB:?DB not set}"
 
 # wait for referencedata service
+REFERENCEDATA_SERVICE_URL="${BASE_URL}/referencedata"
+
 while true
 do
-  STATUS=$(curl -s -o /dev/null -w '%{http_code}' https://covid-ref.openlmis.org/referencedata)
+  STATUS=$(curl -s -o /dev/null -w '%{http_code}' ${REFERENCEDATA_SERVICE_URL})
   if [ $STATUS -eq 200 ]; then
     echo "Referencedata is up"
     break
