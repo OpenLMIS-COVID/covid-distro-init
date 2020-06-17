@@ -22,12 +22,17 @@ DB=`echo ${DATABASE_URL} | sed -E 's/^.*\/(.+)\?*$/\1/'` # /<db>?
 : "${DB:?DB not set}"
 
 # wait for referencedata service
-until curl --output /dev/null --silent --head --fail https://covid-ref.openlmis.org/referencedata; do
-  >&2 echo "Referencedata is unavailable - sleeping"
+while true
+do
+  STATUS=$(curl -s -o /dev/null -w '%{http_code}' https://covid-ref.openlmis.org/referencedata)
+  if [ $STATUS -eq 200 ]; then
+    echo "Referencedata is up"
+    break
+  else
+    echo "Referencedata is unavailable - sleeping"
+  fi
   sleep 5
 done
-
->&2 echo "Referencedata is up"
 
 # pgpassfile makes it easy and safe to login
 echo "${HOST}:${PORT}:${DB}:${POSTGRES_USER}:${POSTGRES_PASSWORD}" > pgpassfile
