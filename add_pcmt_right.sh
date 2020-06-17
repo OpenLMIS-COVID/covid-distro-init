@@ -22,6 +22,7 @@ DB=`echo ${DATABASE_URL} | sed -E 's/^.*\/(.+)\?*$/\1/'` # /<db>?
 : "${DB:?DB not set}"
 
 # pgpassfile makes it easy and safe to login
+echo "URL: ${URL}, POSTGRES USER: ${POSTGRES_USER}"
 echo "${HOST}:${PORT}:${DB}:${POSTGRES_USER}:${POSTGRES_PASSWORD}" > pgpassfile
 chmod 600 pgpassfile
 
