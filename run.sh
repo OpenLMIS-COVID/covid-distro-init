@@ -36,4 +36,5 @@ do
   sleep 5
 done
 
+chmod +x add_pcmt_right.sh
 ./add_pcmt_right.sh

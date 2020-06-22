@@ -9,8 +9,7 @@ RUN apk update \
   && apk add postgresql \
   && apk add curl
 
-RUN chmod +x run.sh \
-  && chmod +x add_pcmt_right.sh
+RUN chmod +x run.sh
 
 EXPOSE 8080
 CMD ["/run.sh"]
