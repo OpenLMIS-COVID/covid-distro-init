@@ -6,6 +6,8 @@ set -e
 : "${DATABASE_URL:?DATABASE_URL not set in environment}"
 : "${POSTGRES_USER:?POSTGRES_USER not set in environment}"
 : "${POSTGRES_PASSWORD:?POSTGRES_PASSWORD not set in environment}"
+: "${REQUISITION_TEMPLATE_FACILITY_TYPES:?REQUISITION_TEMPLATE_FACILITY_TYPES not set in environment}"
+: "${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES:?REQUISITION_TEMPLATE_SBR_FACILITY_TYPES not set in environment}"
 
 # pull apart some of those pieces stuck together in DATABASE_URL
 
@@ -55,5 +57,5 @@ chmod +x add_pcmt_right.sh add_requisition_templates.sh
 
 ./add_pcmt_right.sh
 
-./add_requisition_templates.sh "Requisition Template" ${REQUISITION_TEMPLATE_FACILITY_TYPES}
-./add_requisition_templates.sh "Requisition Template SBR" ${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES}
+./add_requisition_templates.sh "Requisition Template" "${REQUISITION_TEMPLATE_FACILITY_TYPES}"
+./add_requisition_templates.sh "Requisition Template SBR" "${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES}"

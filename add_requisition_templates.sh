@@ -4,11 +4,14 @@
 echo "${HOST}:${PORT}:${DB}:${POSTGRES_USER}:${POSTGRES_PASSWORD}" > pgpassfile
 chmod 600 pgpassfile
 
+# assign template name from the arguments and wrap it with single quotes
+export TEMPLATE_NAME=\'$1\'
+# assign facility types from the arguments and remove the double quotes if exists
+export FACILITY_TYPES=`echo $2 | tr -d '"'`
+
 # execute query
 export PGPASSFILE='pgpassfile'
 export REQUISITION_COLUMNS=`cat requisition_columns.json`
-export TEMPLATE_NAME=\'$1\'
-export FACILITY_TYPES=$2
 
 psql "${URL}" -U ${POSTGRES_USER} -t -c "
 
