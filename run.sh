@@ -36,5 +36,24 @@ do
   sleep 5
 done
 
-chmod +x add_pcmt_right.sh
+# wait for requisition service
+REQUISITION_SERVICE_URL="${BASE_URL}/requisition"
+
+while true
+do
+  STATUS=$(curl -s -o /dev/null -w '%{http_code}' ${REQUISITION_SERVICE_URL})
+  if [ $STATUS -eq 200 ]; then
+    echo "Requisition is up"
+    break
+  else
+    echo "Requisition is unavailable - sleeping"
+  fi
+  sleep 5
+done
+
+chmod +x add_pcmt_right.sh add_requisition_templates.sh
+
 ./add_pcmt_right.sh
+
+./add_requisition_templates.sh "Requisition Template" ${REQUISITION_TEMPLATE_FACILITY_TYPES}
+./add_requisition_templates.sh "Requisition Template SBR" ${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES}
