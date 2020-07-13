@@ -5,7 +5,7 @@
     "displayorder": 0,
     "definition": "Select the check box below to skip a single product. Remove all data from the row prior to selection.",
     "indicator": "S",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Skip",
     "name": "skipped"
   },
@@ -15,7 +15,7 @@
     "displayorder": 1,
     "definition": "Unique identifier for each commodity/product.",
     "indicator": "O",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Product code",
     "name": "orderable.productCode"
   },
@@ -35,7 +35,7 @@
     "displayorder": 3,
     "definition": "Based on the Stock On Hand from the previous period. This is quantified in dispensing units.",
     "indicator": "A",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Beginning balance",
     "name": "beginningBalance"
   },
@@ -45,7 +45,7 @@
     "displayorder": 4,
     "definition": "Total quantity received in the reporting period. This is quantified in dispensing units.",
     "indicator": "B",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Total received quantity",
     "name": "totalReceivedQuantity"
   },
@@ -55,7 +55,7 @@
     "displayorder": 5,
     "definition": "Quantity dispensed/consumed in the reporting period. This is quantified in dispensing units.",
     "indicator": "C",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Total consumed quantity",
     "name": "totalConsumedQuantity"
   },
@@ -65,7 +65,7 @@
     "displayorder": 6,
     "definition": "All kind of losses/adjustments made at the facility.",
     "indicator": "D",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Total losses and adjustments",
     "name": "totalLossesAndAdjustments"
   },
@@ -75,7 +75,7 @@
     "displayorder": 7,
     "definition": "Current physical count of stock on hand. This is quantified in dispensing units.",
     "indicator": "E",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Stock on hand",
     "name": "stockOnHand"
   },
@@ -85,7 +85,7 @@
     "displayorder": 8,
     "definition": "Total number of days facility was out of stock.",
     "indicator": "X",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Total stockout days",
     "name": "totalStockoutDays"
   },
@@ -95,7 +95,7 @@
     "displayorder": 9,
     "definition": "Actual quantity needed after deducting stock in hand. This is quantified in dispensing units.",
     "indicator": "I",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Calculated order quantity",
     "name": "calculatedOrderQuantity"
   },
@@ -105,7 +105,7 @@
     "displayorder": 10,
     "definition": "Requested override of calculated quantity. This is quantified in dispensing units.",
     "indicator": "J",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Requested quantity",
     "name": "requestedQuantity"
   },
@@ -115,7 +115,7 @@
     "displayorder": 11,
     "definition": "Explanation of request for a quantity other than calculated order quantity.",
     "indicator": "W",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Requested quantity explanation",
     "name": "requestedQuantityExplanation"
   },
@@ -125,7 +125,7 @@
     "displayorder": 12,
     "definition": "Total packs to be shipped based on pack size and applying rounding rules.",
     "indicator": "V",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Packs to ship",
     "name": "packsToShip"
   },
@@ -135,7 +135,7 @@
     "displayorder": 13,
     "definition": "Price per pack. Will be blank if price is not defined.",
     "indicator": "T",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Price per pack",
     "name": "pricePerPack"
   },
@@ -145,7 +145,7 @@
     "displayorder": 14,
     "definition": "Any additional remarks.",
     "indicator": "L",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Remarks",
     "name": "remarks"
   },
@@ -155,7 +155,7 @@
     "displayorder": 15,
     "definition": "Final approved quantity. This is quantified in dispensing units.",
     "indicator": "K",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Approved quantity",
     "name": "approvedQuantity"
   },
@@ -185,7 +185,7 @@
     "displayorder": 18,
     "definition": "Total cost of the product based on quantity requested. Will be blank if price is not defined.",
     "indicator": "Q",
-    "isdisplayed": false,
+    "isdisplayed": true,
     "label": "Total cost",
     "name": "totalCost"
   },
