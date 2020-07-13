@@ -7,7 +7,8 @@
     "indicator": "S",
     "isdisplayed": true,
     "label": "Skip",
-    "name": "skipped"
+    "name": "skipped",
+    "option": "disableSkippedLineItems"
   },
   {
     "tag": null,
@@ -17,7 +18,8 @@
     "indicator": "O",
     "isdisplayed": true,
     "label": "Product code",
-    "name": "orderable.productCode"
+    "name": "orderable.productCode",
+    "option": null
   },
   {
     "tag": null,
@@ -27,7 +29,8 @@
     "indicator": "R",
     "isdisplayed": true,
     "label": "Product",
-    "name": "orderable.fullProductName"
+    "name": "orderable.fullProductName",
+    "option": null
   },
   {
     "tag": null,
@@ -37,7 +40,8 @@
     "indicator": "A",
     "isdisplayed": true,
     "label": "Beginning balance",
-    "name": "beginningBalance"
+    "name": "beginningBalance",
+    "option": null
   },
   {
     "tag": "received",
@@ -47,7 +51,8 @@
     "indicator": "B",
     "isdisplayed": true,
     "label": "Total received quantity",
-    "name": "totalReceivedQuantity"
+    "name": "totalReceivedQuantity",
+    "option": null
   },
   {
     "tag": "consumed",
@@ -57,7 +62,8 @@
     "indicator": "C",
     "isdisplayed": true,
     "label": "Total consumed quantity",
-    "name": "totalConsumedQuantity"
+    "name": "totalConsumedQuantity",
+    "option": null
   },
   {
     "tag": "adjustment",
@@ -67,7 +73,8 @@
     "indicator": "D",
     "isdisplayed": true,
     "label": "Total losses and adjustments",
-    "name": "totalLossesAndAdjustments"
+    "name": "totalLossesAndAdjustments",
+    "option": null
   },
   {
     "tag": null,
@@ -77,7 +84,8 @@
     "indicator": "E",
     "isdisplayed": true,
     "label": "Stock on hand",
-    "name": "stockOnHand"
+    "name": "stockOnHand",
+    "option": null
   },
   {
     "tag": null,
@@ -87,7 +95,8 @@
     "indicator": "X",
     "isdisplayed": true,
     "label": "Total stockout days",
-    "name": "totalStockoutDays"
+    "name": "totalStockoutDays",
+    "option": null
   },
   {
     "tag": null,
@@ -97,7 +106,8 @@
     "indicator": "I",
     "isdisplayed": true,
     "label": "Calculated order quantity",
-    "name": "calculatedOrderQuantity"
+    "name": "calculatedOrderQuantity",
+    "option": null
   },
   {
     "tag": null,
@@ -107,7 +117,8 @@
     "indicator": "J",
     "isdisplayed": true,
     "label": "Requested quantity",
-    "name": "requestedQuantity"
+    "name": "requestedQuantity",
+    "option": null
   },
   {
     "tag": null,
@@ -117,7 +128,8 @@
     "indicator": "W",
     "isdisplayed": true,
     "label": "Requested quantity explanation",
-    "name": "requestedQuantityExplanation"
+    "name": "requestedQuantityExplanation",
+    "option": null
   },
   {
     "tag": null,
@@ -127,7 +139,8 @@
     "indicator": "V",
     "isdisplayed": true,
     "label": "Packs to ship",
-    "name": "packsToShip"
+    "name": "packsToShip",
+    "option": "showPackToShipInAllPages"
   },
   {
     "tag": null,
@@ -137,7 +150,8 @@
     "indicator": "T",
     "isdisplayed": true,
     "label": "Price per pack",
-    "name": "pricePerPack"
+    "name": "pricePerPack",
+    "option": null
   },
   {
     "tag": null,
@@ -147,7 +161,8 @@
     "indicator": "L",
     "isdisplayed": true,
     "label": "Remarks",
-    "name": "remarks"
+    "name": "remarks",
+    "option": null
   },
   {
     "tag": null,
@@ -157,7 +172,8 @@
     "indicator": "K",
     "isdisplayed": true,
     "label": "Approved quantity",
-    "name": "approvedQuantity"
+    "name": "approvedQuantity",
+    "option": null
   },
   {
     "tag": null,
@@ -167,7 +183,8 @@
     "indicator": "Y",
     "isdisplayed": false,
     "label": "Total",
-    "name": "total"
+    "name": "total",
+    "option": null
   },
   {
     "tag": null,
@@ -177,7 +194,8 @@
     "indicator": "F",
     "isdisplayed": false,
     "label": "Number of new patients added",
-    "name": "numberOfNewPatientsAdded"
+    "name": "numberOfNewPatientsAdded",
+    "option": "dispensingUnitsForNewPatients"
   },
   {
     "tag": null,
@@ -187,7 +205,8 @@
     "indicator": "Q",
     "isdisplayed": true,
     "label": "Total cost",
-    "name": "totalCost"
+    "name": "totalCost",
+    "option": null
   },
   {
     "tag": null,
@@ -197,7 +216,8 @@
     "indicator": "N",
     "isdisplayed": false,
     "label": "Adjusted consumption",
-    "name": "adjustedConsumption"
+    "name": "adjustedConsumption",
+    "option": null
   },
   {
     "tag": null,
@@ -207,7 +227,8 @@
     "indicator": "P",
     "isdisplayed": false,
     "label": "Average consumption",
-    "name": "averageConsumption"
+    "name": "averageConsumption",
+    "option": null
   },
   {
     "tag": null,
@@ -217,7 +238,8 @@
     "indicator": "H",
     "isdisplayed": false,
     "label": "Maximum stock quantity",
-    "name": "maximumStockQuantity"
+    "name": "maximumStockQuantity",
+    "option": "default"
   },
   {
     "tag": null,
@@ -227,7 +249,8 @@
     "indicator": "G",
     "isdisplayed": false,
     "label": "Ideal Stock Amount",
-    "name": "idealStockAmount"
+    "name": "idealStockAmount",
+    "option": null
   },
   {
     "tag": null,
@@ -237,7 +260,8 @@
     "indicator": "S",
     "isdisplayed": false,
     "label": "Calc Order Qty ISA",
-    "name": "calculatedOrderQuantityIsa"
+    "name": "calculatedOrderQuantityIsa",
+    "option": null
   },
   {
     "tag": null,
@@ -247,7 +271,8 @@
     "indicator": "Z",
     "isdisplayed": false,
     "label": "Additional quantity required",
-    "name": "additionalQuantityRequired"
+    "name": "additionalQuantityRequired",
+    "option": null
   },
   {
     "tag": null,
@@ -257,6 +282,7 @@
     "indicator": "U",
     "isdisplayed": false,
     "label": "Unit/unit of issue",
-    "name": "orderable.dispensable.displayUnit"
+    "name": "orderable.dispensable.displayUnit",
+    "option": null
   }
 ]

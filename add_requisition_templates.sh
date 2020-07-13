@@ -21,7 +21,7 @@ BEGIN
 
 IF NOT EXISTS (SELECT * FROM pg_type WHERE typname = 'requisition_column_definition') THEN
 CREATE TYPE requisition_column_definition AS
-	(columntype TEXT, source INT4, displayorder INT4, definition TEXT, indicator VARCHAR, isdisplayed BOOL, label VARCHAR, name VARCHAR, tag VARCHAR);
+	(columntype TEXT, source INT4, displayorder INT4, definition TEXT, indicator VARCHAR, isdisplayed BOOL, label VARCHAR, name VARCHAR, tag VARCHAR, option VARCHAR);
 END IF;
 
 IF NOT EXISTS (SELECT * FROM requisition.requisition_templates WHERE name = ${TEMPLATE_NAME}) THEN
@@ -32,8 +32,9 @@ IF NOT EXISTS (SELECT * FROM requisition.requisition_templates WHERE name = ${TE
 	INSERT INTO requisition.columns_maps
 		(requisitiontemplateid, requisitioncolumnid, definition, displayorder, indicator, isdisplayed, label, name, requisitioncolumnoptionid, source, key, tag)
 		SELECT requisition_template_id, available_column.id, column_definition.definition, column_definition.displayorder, column_definition.indicator,
-		column_definition.isdisplayed, column_definition.label, column_definition.name, NULL, column_definition.source, column_definition.name, column_definition.tag
+		column_definition.isdisplayed, column_definition.label, column_definition.name, option.id, column_definition.source, column_definition.name, column_definition.tag
 			FROM json_populate_recordset(null::requisition_column_definition, '${REQUISITION_COLUMNS}') column_definition
+			LEFT JOIN requisition.available_requisition_column_options option ON column_definition.option = option.optionname
 			INNER JOIN requisition.available_requisition_columns available_column ON column_definition.name = available_column.name;
 END IF;
 
