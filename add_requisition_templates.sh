@@ -13,7 +13,7 @@ export POPULATE_SOH_FROM_STOCK_CARDS=$3
 
 # execute query
 export PGPASSFILE='pgpassfile'
-export REQUISITION_COLUMNS=`cat requisition_columns.json`
+export REQUISITION_COLUMNS=`cat $4`
 
 psql "${URL}" -U ${POSTGRES_USER} -t -c "
 

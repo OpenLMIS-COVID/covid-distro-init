@@ -57,5 +57,5 @@ chmod +x add_pcmt_right.sh add_requisition_templates.sh
 
 ./add_pcmt_right.sh
 
-./add_requisition_templates.sh "Requisition Template" "${REQUISITION_TEMPLATE_FACILITY_TYPES}" false
-./add_requisition_templates.sh "Requisition Template SBR" "${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES}" true
+./add_requisition_templates.sh "Requisition Template" "${REQUISITION_TEMPLATE_FACILITY_TYPES}" false requisition-templates/base_template_columns.json
+./add_requisition_templates.sh "Requisition Template SBR" "${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES}" true requisition-templates/sbr_template_columns.json
