@@ -8,6 +8,8 @@ chmod 600 pgpassfile
 export TEMPLATE_NAME=\'$1\'
 # assign facility types from the arguments and remove the double quotes if exists
 export FACILITY_TYPES=`echo $2 | tr -d '"'`
+# simply assign the flag value from the arguments
+export POPULATE_SOH_FROM_STOCK_CARDS=$3
 
 # execute query
 export PGPASSFILE='pgpassfile'
@@ -27,7 +29,7 @@ END IF;
 IF NOT EXISTS (SELECT * FROM requisition.requisition_templates WHERE name = ${TEMPLATE_NAME}) THEN
 	INSERT INTO requisition.requisition_templates
 		(id, createddate, numberofperiodstoaverage,	populatestockonhandfromstockcards, archived, name)
-		VALUES(requisition_template_id, NOW(), 3, FALSE, FALSE, ${TEMPLATE_NAME});
+		VALUES(requisition_template_id, NOW(), 3, ${POPULATE_SOH_FROM_STOCK_CARDS}, FALSE, ${TEMPLATE_NAME});
 
 	INSERT INTO requisition.columns_maps
 		(requisitiontemplateid, requisitioncolumnid, definition, displayorder, indicator, isdisplayed, label, name, requisitioncolumnoptionid, source, key, tag)
