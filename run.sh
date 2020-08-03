@@ -53,9 +53,26 @@ do
   sleep 5
 done
 
-chmod +x add_pcmt_right.sh add_requisition_templates.sh
+# wait for report service
+REPORT_SERVICE_URL="${BASE_URL}/report"
+
+while true
+do
+  STATUS=$(curl -s -o /dev/null -w '%{http_code}' ${REPORT_SERVICE_URL})
+  if [ $STATUS -eq 200 ]; then
+    echo "Report is up"
+    break
+  else
+    echo "Report is unavailable - sleeping"
+  fi
+  sleep 5
+done
+
+chmod +x add_pcmt_right.sh add_requisition_templates.sh add_aggregate_equipment_status_report.sh
 
 ./add_pcmt_right.sh
 
 ./add_requisition_templates.sh "Requisition Template" "${REQUISITION_TEMPLATE_FACILITY_TYPES}" false requisition-templates/base_template_columns.json
 ./add_requisition_templates.sh "Requisition Template SBR" "${REQUISITION_TEMPLATE_SBR_FACILITY_TYPES}" true requisition-templates/sbr_template_columns.json
+
+./add_aggregate_equipment_status_report.sh
